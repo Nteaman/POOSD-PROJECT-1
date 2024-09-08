@@ -30,7 +30,7 @@
 				$stmt->execute();
 				$stmt->close();
 				$conn->close();
-				returnWithError("");
+				returnWithSuccess();
 			}
     }
 
@@ -51,7 +51,7 @@
         sendResultInfoAsJson( $retValue );
     }
 		
-		function returnWithSuccess( $err )
+		function returnWithSuccess()
     {
         $retValue = '{"result":"success"}';
         sendResultInfoAsJson( $retValue );
