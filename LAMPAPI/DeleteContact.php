@@ -1,10 +1,10 @@
 <?php
+
+		// HOW TO SECURE THIS?
+		
     $inData = getRequestInfo();
 
-    $name = $inData["name"];
-    $phone = $inData["phone"];
-    $email = $inData["email"];
-    $userId = $inData["userId"];
+    $id = $inData["ID"];
 
     $conn = new mysqli("localhost", "daisy", "SPOoks0219!!", "SMALLPROJ");
     if($conn->connect_error)
@@ -12,8 +12,8 @@
         returnWithError( $conn->connect_error );
     }
     else{
-        $stmt = $conn->prepare("INSERT into Contacts (Name,Phone,Email,UserID) VALUES(?,?,?,?)");
-        $stmt->bind_param("ssss", $name, $phone, $email, $userId);
+        $stmt = $conn->prepare("DELETE from Contacts WHERE ID=?");
+        $stmt->bind_param("s", $id);
         $stmt->execute();
         $stmt->close();
         $conn->close();
@@ -31,6 +31,7 @@
         echo $obj;
     }
 
+    
     function returnWithError( $err )
     {
         $retValue = '{"result":"error","error":"' . $err . '"}';
