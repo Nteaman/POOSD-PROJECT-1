@@ -49,7 +49,7 @@ function doLogin()
 
 				saveCookie();
 	
-				window.location.href = "color.html";
+				window.location.href = "Landingpage.html";
 			}
 		};
 		xhr.send(jsonPayload);
