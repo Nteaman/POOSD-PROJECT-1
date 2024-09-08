@@ -85,7 +85,7 @@ input[type="text"],input[type="password"]{
     text-align: center;
     padding: 15px;
     display: inline-block;
-    margin-left: 5px 0 22px 0;
+    margin: auto;
     font-family: 'Ubuntu', sans-serif;
 }
 
