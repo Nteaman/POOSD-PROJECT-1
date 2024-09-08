@@ -1,5 +1,3 @@
-const urlBase = 'http://nteaman_instance1.natalieteaman.site';
-const extension = 'php';
 
 function doSignup() {
 	userId = 0;
