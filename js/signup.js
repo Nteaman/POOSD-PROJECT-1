@@ -15,6 +15,7 @@ function doSignup() {
 		if(!(firstName && lastName && login && password)){
 			flag = true;
 			document.getElementById("createResult").innerHTML = "Please do not leave any fields blank";
+		}
 	}
 
 	let tmp = { firstName: firstName, lastName: lastName, login: login, password: password };
