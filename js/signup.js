@@ -3,7 +3,7 @@ function doSignup() {
 	userId = 0;
 	let flag = true;
 	
-	document.getElementById("createResult").innerHTML = "";
+	document.getElementById("createResult").innerHTML = "No fields blank pleaseee";
 
 	
 	while (flag) {
