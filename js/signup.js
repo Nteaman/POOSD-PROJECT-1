@@ -29,7 +29,7 @@ function doSignup() {
 	try {
 		xhr.onreadystatechange = function () {
 			if (this.readyState == 4 && this.status == 200) {
-				window.location.href = "color.html";
+				window.location.href = "Landingpage.html";
 			}
 		};
 		xhr.send(jsonPayload);
