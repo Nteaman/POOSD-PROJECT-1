@@ -1,4 +1,4 @@
-const urlBase = 'http://nteaman_instance1.natalieteaman.site';
+const urlBase = 'http://nteaman_instance1.natalieteaman.site/LAMPAPI';
 const extension = 'php';
 
 let userId = 0;
