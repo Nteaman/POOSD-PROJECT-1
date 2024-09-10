@@ -6,17 +6,14 @@ function doSignup() {
 	document.getElementById("createResult").innerHTML = "No fields blank pleaseee";
 
 	
-	while (flag) {
-		flag = false;
+	
+		
 		let firstName = document.getElementById("firstname").value;
 		let lastName = document.getElementById("lastname").value;
 		let login = document.getElementById("username").value;
 		let password = document.getElementById("password").value;
-		if(!(firstName && lastName && login && password)){
-			flag = true;
-			document.getElementById("createResult").innerHTML = "Please do not leave any fields blank";
-		}
-	}
+	
+	
 
 	let tmp = { firstName: firstName, lastName: lastName, login: login, password: password };
 	let jsonPayload = JSON.stringify(tmp);
