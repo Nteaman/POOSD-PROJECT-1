@@ -10,4 +10,22 @@ Contact Manager is a web application designed to help users manager their contac
 
 ##Technology Stack
 - Frontend: HTML, JavaScript
-- Backend: 
+- Backend: php, AWS LightSail
+- Dataabse: MariaDB
+- Version Control: GitHub
+
+##Installation
+1. Clone the repository
+2. 
+
+##Usage
+To connect the web application, simply search  http://nteaman_instance1.natalieteaman.site on your web browser. Register the 
+
+##Meet The Team
+This project was contributed by:
+- Project Manager: Natalie Teaman
+- Database Administrator: Daisy Hernandez Gonzalez
+- API Developer: Nathan Hicks
+- API Developer: Thomas 
+- Frontend Developer: Oneil 
+- Frontend Developer: Aaron
