@@ -26,6 +26,7 @@ function doSignup() {
 	try {
 		xhr.onreadystatechange = function () {
 			if (this.readyState == 4 && this.status == 200) {
+				document.getElementById("createResult").innerHTML = "success!";
 				window.location.href = "Landingpage.html";
 			}
 		};
