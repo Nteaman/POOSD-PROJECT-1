@@ -3,7 +3,7 @@ function doSignup() {
 	userId = 0;
 	let flag = true;
 	
-	document.getElementById("createResult").innerHTML = "No fields blank pleaseee";
+	//document.getElementById("createResult").innerHTML = "No fields blank pleaseee";
 
 	
 	
@@ -26,7 +26,7 @@ function doSignup() {
 	try {
 		xhr.onreadystatechange = function () {
 			if (this.readyState == 4 && this.status == 200) {
-				document.getElementById("createResult").innerHTML = "success!";
+				//document.getElementById("createResult").innerHTML = "success!";
 				window.location.href = "Landingpage.html";
 			}
 		};
