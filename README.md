@@ -1,27 +1,27 @@
-#Contact Manager
+# Contact Manager
 
-##Overview
+## Overview
 Contact Manager is a web application designed to help users manager their contacts. The application allows users to store, retrieve, delete contact information.
 
-##Features
+## Features
 - Add Contact: Easily add a new contact with fields for name, phone number, and email.
 - Search Contacts: Quickly search and filter contacts by name
 - Delete Contact: Remove contacts that are no longer needed
 
-##Technology Stack
+## Technology Stack
 - Frontend: HTML, JavaScript
 - Backend: php, AWS LightSail
 - Dataabse: MariaDB
 - Version Control: GitHub
 
-##Installation
+## Installation
 1. Clone the repository
 2. 
 
-##Usage
+## Usage
 To connect the web application, simply search  http://nteaman_instance1.natalieteaman.site on your web browser. Register the 
 
-##Meet The Team
+## Meet The Team
 This project was contributed by:
 - Project Manager: Natalie Teaman
 - Database Administrator: Daisy Hernandez Gonzalez
