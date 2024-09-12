@@ -6,6 +6,12 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+.horizonal-center{
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
 
 body 
 {
