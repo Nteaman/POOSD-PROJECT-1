@@ -18,13 +18,12 @@ h1, #title
 
 }
 
-#loginDiv, #loggedInDiv, #accessUIDiv
+#loginDiv, #loggedInDiv, #accessUIDiv, #searchDiv
 {
     font-size: 30px;
     width: 70%;
     margin-left: 15%;
     padding: 25px;
-    background-color: #b2b2b2;
 }
 
 #button
@@ -42,7 +41,7 @@ h1, #title
     opacity: 50%;
 }
 
-#loginName, #loginPassword, #firstname, #lastname, #username, #password
+#loginName, #loginPassword, #firstname, #lastname, #username, #password, #searchInput
 {
 	font-size: 30px;
     width: 60%;
@@ -113,13 +112,6 @@ select{
     margin-top: 2%;
     font-size: 0.75em;
     font-family: 'Ubuntu', sans-serif;
-}
-
-#searchDiv
-{
-    width: 80%;
-    margin: 20px auto;
-    text-align: center;
 }
 
 .table
