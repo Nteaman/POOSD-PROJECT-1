@@ -35,7 +35,7 @@ h1, #title
     padding: 25px;
 }
 
-#button
+.buttons
 {
     font-size: 30px;
     /*border-radius: 25px;*/
