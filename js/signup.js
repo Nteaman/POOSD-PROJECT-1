@@ -30,7 +30,3 @@ function doSignup() {
 	}
 
 }
-
-goDashboard(){
-	window.location.href = "Landingpage.html";
-}

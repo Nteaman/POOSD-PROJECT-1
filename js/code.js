@@ -187,3 +187,9 @@ function searchContact()
 	}
 	
 }
+
+
+function goDashboard(){
+	window.location.href = "Landingpage.html";
+}
+
