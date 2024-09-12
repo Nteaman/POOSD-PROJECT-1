@@ -21,7 +21,7 @@ h1, #title
 #loginDiv, #loggedInDiv, #accessUIDiv, #searchDiv
 {
     font-size: 30px;
-    width: 70%;
+    width: 30%;
     margin-left: 15%;
     padding: 25px;
 }
@@ -52,7 +52,7 @@ h1, #title
 
 #label
 {
-    font-size: 2em;
+    font-size: 20;
     width: 60%;
     margin: 10px auto;
     text-align: center;
@@ -125,7 +125,7 @@ select{
 {
     color: #FFFFFF;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 0.75em;
 }
 
 .table tbody td{
