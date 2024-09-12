@@ -15,6 +15,13 @@
     transform: translateX(-50%);
 }
 
+.textbox {
+display: flex;
+flex-direction: column;
+justify-content: center;
+background-color: #364652
+}
+
 body 
 {
     background-color: #44566A;
