@@ -16,10 +16,11 @@
 }
 
 .textbox {
-display: flex;
-flex-direction: column;
-justify-content: center;
-background-color: #364652
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   background-color: #364652
 }
 
 body 
