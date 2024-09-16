@@ -165,6 +165,8 @@ function searchTable()
 		{
 			if (this.readyState == 4 && this.status == 200) 
 			{
+				console.log(JSON.stringify( xhr.responseText ));
+				
 				let jsonObject = JSON.parse( xhr.responseText );
 				
 				for( let i=0; i<jsonObject.results.length; i++ )
