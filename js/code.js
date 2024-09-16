@@ -37,7 +37,8 @@ function doLogin()
 			{
 				let jsonObject = JSON.parse( xhr.responseText );
 				userId = jsonObject.id;
-		
+				console.log(userId);
+
 				if( userId < 1 )
 				{		
 					//document.getElementById("loginResult").innerHTML = "User/Password combination incorrect";
@@ -147,6 +148,8 @@ function addContact()
 
 function searchTable()
 {
+	console.log(userId);
+	
 	let search = document.getElementById("searchInput").value;
 	
 	let colorList = "";
