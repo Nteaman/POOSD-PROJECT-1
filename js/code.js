@@ -227,12 +227,14 @@ function searchTable()
 	
 }
 
-function searchContact(o) {
-    var row = (o).closest("tr");    // Find the row
-    var text = row.find(".nr").text(); // Find the text
+function searchContact(this) {
+    // Accessing row data using the data-* attributes
+        let tr = $(this_).closest("tr");
+
+	rowindex = tr.index();
     
     // Let's test it out
-    alert(text);
+    alert(rowIndex);
 };
 
 
