@@ -189,7 +189,7 @@ function searchTable()
 					let newRow = document.createElement('tr');
 
 					let cell0 = document.createElement('td'); 
-					cell0.textContent = i; 
+					cell0.textContent = i + 1; 
 					newRow.appendChild(cell0); 
 					
 					let cell1 = document.createElement('td'); 
