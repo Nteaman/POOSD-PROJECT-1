@@ -188,21 +188,21 @@ function searchTable()
 					
 					let newRow = document.createElement('tr');
 
+					let cell0 = document.createElement('td'); 
+					cell1.textContent = i; 
+					newRow.appendChild(cell0); 
+					
 					let cell1 = document.createElement('td'); 
-					cell1.textContent = jsonObject.results[i]; 
+					cell1.textContent = jsonObject.name[i]; 
 					newRow.appendChild(cell1); 
-					console.log(jsonObject.results[i].name);
-
  
 					let cell2 = document.createElement('td'); 
-					cell2.textContent = jsonObject.results[i].email; 
+					cell2.textContent = jsonObject.phone[i]; 
 					newRow.appendChild(cell2); 
-					console.log(jsonObject.results[i].email)
  
 					let cell3 = document.createElement('td'); 
-					cell3.textContent = jsonObject.results[i].phone; 
+					cell3.textContent = jsonObject.email[i]; 
 					newRow.appendChild(cell3); 
-					console.log(jsonObject.results[i].phone)
  
 					// Append the new row to the table 
 					bodyRef.appendChild(newRow); 
