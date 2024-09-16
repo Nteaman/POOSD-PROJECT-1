@@ -66,6 +66,21 @@ h1, #title
     opacity: 50%;
 }
 
+.edit-button, .delete-button {
+    font-size: 1em;
+    padding: 5px 10px;
+    margin: 5px;
+    background-color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+}
+
+.edit-button:hover, .delete-button:hover {
+    background-color: #00d5124f;
+    color: #FFFFFF;
+    opacity: 50%;
+}
+
 #loginName, #loginPassword, #firstname, #lastname, #username, #password, #searchInput
 {
 	font-size: 30px;
