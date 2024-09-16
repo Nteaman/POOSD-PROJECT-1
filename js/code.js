@@ -205,7 +205,7 @@ function searchTable()
 					newRow.appendChild(cell3); 
 
 					let cell4 = document.createElement('td'); 
-					cell4.innerHTML = '<button class="edit-button" onclick="searchContact(this)>Edit</button>';
+					cell4.innerHTML = '<button class="edit-button" onclick="searchContact(this)">Edit</button>';
 					newRow.appendChild(cell4);
 
 					let cell5 = document.createElement('td'); 
