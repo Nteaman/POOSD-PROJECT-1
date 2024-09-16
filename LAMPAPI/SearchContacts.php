@@ -2,7 +2,9 @@
 
 	$inData = getRequestInfo();
 	
-	$searchResults = "";
+	$names = "";
+	$phones = "";
+	$emails = "";
 	$searchCount = 0;
 
 	$conn = new mysqli("localhost", "daisy", "SPOoks0219!!", "SMALLPROJ");
@@ -23,10 +25,15 @@
 		{
 			if( $searchCount > 0 )
 			{
-				$searchResults .= ",";
+				$names .= ",";
+				$phones .= ",";
+				$emails .= ",";
 			}
 			$searchCount++;
-			$searchResults .= '"' . $row["Name"] . '"';
+			$names .= '"' . $row["Name"] . '"';
+			$phones .= '"' . $row["Phone"] . '"';
+			$emails .= '"' . $row["Email"] . '"';
+			
 		}
 		
 		if( $searchCount == 0 )
@@ -35,7 +42,7 @@
 		}
 		else
 		{
-			returnWithInfo( $searchResults );
+			returnWithInfo( $names, $numbers, $emails );
 		}
 		
 		$stmt->close();
@@ -59,9 +66,9 @@
 		sendResultInfoAsJson( $retValue );
 	}
 	
-	function returnWithInfo( $searchResults )
+	function returnWithInfo( $names, $numbers, $emails )
 	{
-		$retValue = '{"results":[' . $searchResults . '],"error":""}';
+		$retValue = '{"name":[' . $names . '],"email":[' . $emails . '],"phone":[' . $phones . '],"error":""}';
 		sendResultInfoAsJson( $retValue );
 	}
 	
