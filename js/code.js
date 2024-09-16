@@ -51,7 +51,7 @@ function doLogin()
 				saveCookie();
 	
 				window.location.href = "Landingpage.html";
-				console.log(userId);
+				//console.log(userId);
 
 			}
 		};
