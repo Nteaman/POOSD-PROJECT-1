@@ -206,11 +206,11 @@ function searchTable()
 					newRow.appendChild(cell3); 
 
 					let cell4 = document.createElement('td'); 
-					cell4.innerHTML = '<button class="edit-button" id="edit" onclick="searchContact(this)">Edit</button>';
+					cell4.innerHTML = '<button class="edit-button" id="edit" onclick="searchContact('i')">Edit</button>';
 					newRow.appendChild(cell4);
 
 					let cell5 = document.createElement('td'); 
-					cell5.innerHTML = '<button class="delete-button" id="delete" onclick="deleteContact(this)">Delete</button>';
+					cell5.innerHTML = '<button class="delete-button" id="delete" onclick="deleteContact('i')">Delete</button>';
 					newRow.appendChild(cell5); 
  
 					// Append the new row to the table 
@@ -228,14 +228,11 @@ function searchTable()
 	
 }
 
-function searchContact(this_) {
-    // Accessing row data using the data-* attributes
-        let tr = document.getElementById("edit").closest("tr");
-
-	rowindex = tr.index();
+function searchContact(row) {
+        
     
     // Let's test it out
-    alert(rowIndex);
+    alert(row);
 };
 
 
