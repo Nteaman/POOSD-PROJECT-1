@@ -165,7 +165,6 @@ function searchTable()
 		{
 			if (this.readyState == 4 && this.status == 200) 
 			{
-				document.getElementById("label").innerHTML = "Color(s) has been retrieved";
 				let jsonObject = JSON.parse( xhr.responseText );
 				
 				for( let i=0; i<jsonObject.results.length; i++ )
