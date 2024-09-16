@@ -235,7 +235,7 @@ function deleteContact(row) {
 	let phone = row.parentNode.parentNode.getElementsByTagName('td')[2].innerHTML;
 	let email = row.parentNode.parentNode.getElementsByTagName('td')[3].innerHTML;
 
-	if(!confirm("You are about to delete " + name + " from your contacts. \n Press OK to confirm.")) return;
+	if(!confirm("You are about to delete " + name + " from your contacts. \nPress OK to confirm.")) return;
 
 	let tmp = {name:name,phone:phone,email:email,userId:userId};
 	let jsonPayload = JSON.stringify( tmp );
