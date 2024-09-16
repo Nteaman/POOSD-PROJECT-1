@@ -228,11 +228,11 @@ function searchTable()
 }
 
 function searchContact(o) {
-    var $row = $(o).closest("tr");    // Find the row
-    var $text = $row.find(".nr").text(); // Find the text
+    var row = (o).closest("tr");    // Find the row
+    var text = row.find(".nr").text(); // Find the text
     
     // Let's test it out
-    alert($text);
+    alert(text);
 };
 
 
