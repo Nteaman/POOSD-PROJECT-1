@@ -203,6 +203,14 @@ function searchTable()
 					let cell3 = document.createElement('td'); 
 					cell3.textContent = jsonObject.email[i]; 
 					newRow.appendChild(cell3); 
+
+					let cell4 = document.createElement('td'); 
+					cell4.innerHTML = <button class="edit-button" onclick="updateContact(this)">Edit</button>;
+					newRow.appendChild(cell4);
+
+					let cell5 = document.createElement('td'); 
+					cell5.innerHTML = <button class="delete-button" onclick="deleteContact(this)">Delete</button>;
+					newRow.appendChild(cell5); 
  
 					// Append the new row to the table 
 					bodyRef.appendChild(newRow); 
