@@ -185,7 +185,7 @@ function searchTable()
 					let newRow = document.createElement('tr');
 
 					let cell1 = document.createElement('td'); 
-					cell1.textContent = jsonObject.results[i].name; 
+					cell1.textContent = jsonObject.results[i]; 
 					newRow.appendChild(cell1); 
 					console.log(jsonObject.results[i].name);
 
