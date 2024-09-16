@@ -150,7 +150,7 @@ function addContact()
 
 function searchTable()
 {
-	console.log(userId);
+	//console.log(userId);
 	
 	let search = document.getElementById("searchInput").value;
 	
@@ -173,7 +173,7 @@ function searchTable()
 		{
 			if (this.readyState == 4 && this.status == 200) 
 			{
-				console.log(JSON.stringify( xhr.responseText ));
+				//console.log(JSON.stringify( xhr.responseText ));
 				
 				let jsonObject = JSON.parse( xhr.responseText );
 
@@ -205,11 +205,11 @@ function searchTable()
 					newRow.appendChild(cell3); 
 
 					let cell4 = document.createElement('td'); 
-					cell4.innerHTML = <button class="edit-button" onclick="updateContact(this)">Edit</button>;
+					cell4.innerHTML = '<button class="edit-button" onclick="updateContact(this)">Edit</button>';
 					newRow.appendChild(cell4);
 
 					let cell5 = document.createElement('td'); 
-					cell5.innerHTML = <button class="delete-button" onclick="deleteContact(this)">Delete</button>;
+					cell5.innerHTML = '<button class="delete-button" onclick="deleteContact(this)">Delete</button>';
 					newRow.appendChild(cell5); 
  
 					// Append the new row to the table 
