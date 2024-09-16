@@ -145,7 +145,7 @@ function addContact()
 }
 
 
-function searchContact()
+function searchTable()
 {
 	let srch = document.getElementById("searchInput").value;
 	document.getElementById("colorSearchResult").innerHTML = "";
