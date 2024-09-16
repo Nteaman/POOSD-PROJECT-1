@@ -15,7 +15,7 @@ Contact Manager is a web application designed to help users manager their contac
 - Version Control: GitHub
 
 ## Usage
-To connect the web application, simply search  http://nteaman_instance1.natalieteaman.site on your web browser. Register the 
+To connect the web application, simply search  http://nteaman_instance1.natalieteaman.site on your web browser.
 
 ## Meet The Team
 This project was contributed by:
