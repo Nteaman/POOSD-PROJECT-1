@@ -232,7 +232,7 @@ function searchContact(row) {
         
     
     
-    alert(row.innerHTML);
+    alert(row.parentNode.innerHTML);
 };
 
 
