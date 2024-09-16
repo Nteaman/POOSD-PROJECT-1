@@ -205,7 +205,7 @@ function searchTable()
 					newRow.appendChild(cell3); 
 
 					let cell4 = document.createElement('td'); 
-					cell4.innerHTML = '<button class="edit-button" onclick="updateContact(this)">Edit</button>';
+					cell4.innerHTML = '<button class="edit-button">Edit</button>';
 					newRow.appendChild(cell4);
 
 					let cell5 = document.createElement('td'); 
@@ -226,6 +226,14 @@ function searchTable()
 	}
 	
 }
+
+$(".edit-button").click(function() {
+    var $row = $(this).closest("tr");    // Find the row
+    var $text = $row.find(".nr").text(); // Find the text
+    
+    // Let's test it out
+    alert($text);
+});
 
 
 function goDashboard(){
