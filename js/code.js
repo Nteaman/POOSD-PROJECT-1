@@ -228,11 +228,40 @@ function searchTable()
 	
 }
 
-function searchContact(row) {
-        
+function deleteContact(row) {
     
-    
-    alert(row.parentNode.parentNode.getElementsByTagName('td')[1].innerHTML);
+	
+	let name = row.parentNode.parentNode.getElementsByTagName('td')[1].innerHTML;
+	let phone = row.parentNode.parentNode.getElementsByTagName('td')[2].innerHTML;
+	let email = row.parentNode.parentNode.getElementsByTagName('td')[3].innerHTML;
+
+	if(!confirm("You are about to delete " + name + " from your contacts. \n Press OK to confirm.") return;
+	
+
+	let tmp = {name:name,phone:phone,email:email,userId:userId};
+	let jsonPayload = JSON.stringify( tmp );
+
+	let url = urlBase +testBranch + api + '/DeleteContact.' + extension;
+	
+	let xhr = new XMLHttpRequest();
+	xhr.open("POST", url, true);
+	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+	try
+	{
+		xhr.onreadystatechange = function() 
+		{
+			if (this.readyState == 4 && this.status == 200) 
+			{
+				searchTable();
+			}
+		};
+		xhr.send(jsonPayload);
+	}
+	catch(err)
+	{
+		//document.getElementById("colorAddResult").innerHTML = err.message;
+	}
+	
 };
 
 
