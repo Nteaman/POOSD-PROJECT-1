@@ -206,12 +206,11 @@ function searchTable()
 					newRow.appendChild(cell3); 
 
 					let cell4 = document.createElement('td'); 
-					cell4.innerHTML = '<button class="edit-button" id="edit" >Edit</button>';
+					cell4.innerHTML = '<button class="edit-button" onclick="searchContact(this)" >Edit</button>';
 					newRow.appendChild(cell4);
-					document.getElementById('edit').onclick = function(){searchContact(i)};
 
 					let cell5 = document.createElement('td'); 
-					cell5.innerHTML = '<button class="delete-button" id="delete" onclick="deleteContact(this)">Delete</button>';
+					cell5.innerHTML = '<button class="delete-button" onclick="deleteContact(this)">Delete</button>';
 					newRow.appendChild(cell5); 
  
 					// Append the new row to the table 
@@ -232,8 +231,8 @@ function searchTable()
 function searchContact(row) {
         
     
-    // Let's test it out
-    alert(row);
+    
+    alert(row.innerHTML);
 };
 
 
