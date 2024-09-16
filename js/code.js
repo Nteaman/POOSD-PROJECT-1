@@ -176,6 +176,8 @@ function searchTable()
 				console.log(JSON.stringify( xhr.responseText ));
 				
 				let jsonObject = JSON.parse( xhr.responseText );
+
+				const table = document.getElementById('myTable');
 				
 				for( let i=0; i<jsonObject.results.length; i++ )
 				{
