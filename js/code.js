@@ -187,6 +187,7 @@ function searchTable()
 				{
 					
 					let newRow = document.createElement('tr');
+					newRow.id = i;
 
 					let cell0 = document.createElement('td'); 
 					cell0.textContent = i + 1; 
