@@ -147,11 +147,11 @@ function addContact()
 
 function searchTable()
 {
-	let srch = document.getElementById("searchInput").value;
+	let search = document.getElementById("searchInput").value;
 	
 	let colorList = "";
 
-	let tmp = {search:srch,userId:userId};
+	let tmp = {search:search,userId:userId};
 	let jsonPayload = JSON.stringify( tmp );
 
 	let url = urlBase + testBranch + api + '/SearchContacts.' + extension;
