@@ -148,7 +148,6 @@ function addContact()
 function searchTable()
 {
 	let srch = document.getElementById("searchInput").value;
-	document.getElementById("colorSearchResult").innerHTML = "";
 	
 	let colorList = "";
 
