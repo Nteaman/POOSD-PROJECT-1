@@ -154,7 +154,7 @@ function searchTable()
 	
 	let colorList = "";
 
-	let tmp = {search:search,userId:userId};
+	let tmp = {search:search,userId,userId};
 	let jsonPayload = JSON.stringify( tmp );
 
 	let url = urlBase + testBranch + api + '/SearchContacts.' + extension;
