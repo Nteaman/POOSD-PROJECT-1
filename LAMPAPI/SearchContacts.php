@@ -42,7 +42,7 @@
 		}
 		else
 		{
-			returnWithInfo( $names, $numbers, $emails );
+			returnWithInfo( $names, $phones, $emails );
 		}
 		
 		$stmt->close();
@@ -66,7 +66,7 @@
 		sendResultInfoAsJson( $retValue );
 	}
 	
-	function returnWithInfo( $names, $numbers, $emails )
+	function returnWithInfo( $names, $phones, $emails )
 	{
 		$retValue = '{"name":[' . $names . '],"email":[' . $emails . '],"phone":[' . $phones . '],"error":""}';
 		sendResultInfoAsJson( $retValue );
