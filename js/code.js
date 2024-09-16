@@ -147,7 +147,7 @@ function addContact()
 
 function searchContact()
 {
-	let srch = document.getElementById("searchText").value;
+	let srch = document.getElementById("searchInput").value;
 	document.getElementById("colorSearchResult").innerHTML = "";
 	
 	let colorList = "";
@@ -155,7 +155,7 @@ function searchContact()
 	let tmp = {search:srch,userId:userId};
 	let jsonPayload = JSON.stringify( tmp );
 
-	let url = urlBase + '/SearchContacts.' + extension;
+	let url = urlBase + testBranch + api + '/SearchContacts.' + extension;
 	
 	let xhr = new XMLHttpRequest();
 	xhr.open("POST", url, true);
@@ -166,26 +166,36 @@ function searchContact()
 		{
 			if (this.readyState == 4 && this.status == 200) 
 			{
-				document.getElementById("colorSearchResult").innerHTML = "Color(s) has been retrieved";
+				document.getElementById("label").innerHTML = "Color(s) has been retrieved";
 				let jsonObject = JSON.parse( xhr.responseText );
 				
 				for( let i=0; i<jsonObject.results.length; i++ )
 				{
-					colorList += jsonObject.results[i];
-					if( i < jsonObject.results.length - 1 )
-					{
-						colorList += "<br />\r\n";
-					}
+					
+					let newRow = document.createElement('tr');
+
+					let cell1 = document.createElement('td'); 
+					cell1.textContent = jsonObject.results[i].name; 
+					newRow.appendChild(cell1); 
+ 
+					let cell2 = document.createElement('td'); 
+					cell2.textContent = jsonObject.results[i].email; 
+					newRow.appendChild(cell2); 
+ 
+					let cell3 = document.createElement('td'); 
+					cell3.textContent = jsonObject.results[i].phone; 
+					newRow.appendChild(cell3); 
+ 
+					// Append the new row to the table 
+					table.appendChild(newRow); 
 				}
 				
-				document.getElementsByTagName("p")[0].innerHTML = colorList;
 			}
 		};
 		xhr.send(jsonPayload);
 	}
 	catch(err)
 	{
-		document.getElementById("colorSearchResult").innerHTML = err.message;
 	}
 	
 }
