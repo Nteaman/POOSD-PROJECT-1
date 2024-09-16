@@ -183,7 +183,7 @@ function searchTable()
 				let bodyRef = document.getElementById('myTable').getElementsByTagName('tbody')[0];
 				bodyRef.innerHTML = '';
 				
-				for( let i=0; i<jsonObject.results.length; i++ )
+				for( let i=0; i<jsonObject.name.length; i++ )
 				{
 					
 					let newRow = document.createElement('tr');
