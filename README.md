@@ -14,10 +14,6 @@ Contact Manager is a web application designed to help users manager their contac
 - Dataabse: MariaDB
 - Version Control: GitHub
 
-## Installation
-1. Clone the repository
-2. 
-
 ## Usage
 To connect the web application, simply search  http://nteaman_instance1.natalieteaman.site on your web browser. Register the 
 
