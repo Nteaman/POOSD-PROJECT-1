@@ -233,7 +233,7 @@ function searchContact(o) {
     
     // Let's test it out
     alert($text);
-});
+};
 
 
 function goDashboard(){
