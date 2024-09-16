@@ -227,7 +227,7 @@ function searchTable()
 	
 }
 
-function searchContact(this) {
+function searchContact(this_) {
     // Accessing row data using the data-* attributes
         let tr = $(this_).closest("tr");
 
