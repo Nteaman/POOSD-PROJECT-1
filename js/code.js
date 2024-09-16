@@ -229,7 +229,7 @@ function searchTable()
 
 function searchContact(this_) {
     // Accessing row data using the data-* attributes
-        let tr = document.getElementById(this_).closest("tr");
+        let tr = document.getElementById("edit").closest("tr");
 
 	rowindex = tr.index();
     
