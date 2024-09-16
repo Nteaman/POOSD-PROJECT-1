@@ -177,7 +177,7 @@ function searchTable()
 				
 				let jsonObject = JSON.parse( xhr.responseText );
 
-				const table = document.getElementById('myTable');
+				let table = document.getElementById('myTable');
 				
 				for( let i=0; i<jsonObject.results.length; i++ )
 				{
@@ -187,14 +187,18 @@ function searchTable()
 					let cell1 = document.createElement('td'); 
 					cell1.textContent = jsonObject.results[i].name; 
 					newRow.appendChild(cell1); 
+					console.log(jsonObject.results[i].name);
+
  
 					let cell2 = document.createElement('td'); 
 					cell2.textContent = jsonObject.results[i].email; 
 					newRow.appendChild(cell2); 
+					console.log(jsonObject.results[i].email)
  
 					let cell3 = document.createElement('td'); 
 					cell3.textContent = jsonObject.results[i].phone; 
 					newRow.appendChild(cell3); 
+					console.log(jsonObject.results[i].phone)
  
 					// Append the new row to the table 
 					table.appendChild(newRow); 
