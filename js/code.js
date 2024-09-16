@@ -178,9 +178,10 @@ function searchTable()
 				let jsonObject = JSON.parse( xhr.responseText );
 
 				let table = document.getElementById('myTable');
-				table.getElementsByTagName('tbody')[0].innerHTML = "";
+				//table.getElementsByTagName('tbody')[0].innerHTML = "";
 
-				//var bodyRef = document.getElementById('myTable').getElementsByTagName('tbody')[0]; bodyRef.innerHTML = '';
+				let bodyRef = document.getElementById('myTable').getElementsByTagName('tbody')[0];
+				bodyRef.innerHTML = '';
 				
 				for( let i=0; i<jsonObject.results.length; i++ )
 				{
@@ -204,7 +205,7 @@ function searchTable()
 					console.log(jsonObject.results[i].phone)
  
 					// Append the new row to the table 
-					table.appendChild(newRow); 
+					bodyRef.appendChild(newRow); 
 				}
 				
 			}
