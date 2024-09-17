@@ -232,14 +232,13 @@ function deleteContact(row) {
     
 	
 	let name = row.parentNode.parentNode.getElementsByTagName('td')[1].innerHTML;
-	let phone = row.parentNode.parentNode.getElementsByTagName('td')[2].innerHTML;
-	let email = row.parentNode.parentNode.getElementsByTagName('td')[3].innerHTML;
+
 	let id = row.parentNode.parentNode.id;
-	alert(id);
+	
 
 	if(!confirm("You are about to delete " + name + " from your contacts. \nPress OK to confirm.")) return;
 
-	let tmp = {name:name,phone:phone,email:email,userId:userId};
+	let tmp = {id:id,userId:userId};
 	let jsonPayload = JSON.stringify( tmp );
 
 	let url = urlBase +testBranch + api + '/DeleteContact.' + extension;
