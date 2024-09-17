@@ -229,6 +229,8 @@ function searchTable()
 }
 
 function editContact(row) {
+	let id = row.parentNode.parentNode.id;
+	
 	let table = document.getElementById('myTable');
 	let ind = row.parentNode.parentNode.rowIndex + 1;
 	let newRow = table.insertRow(ind);
@@ -261,16 +263,49 @@ function editContact(row) {
 	newText.placeholder = "Enter new email here...";
   	newCell.appendChild(newText);
 
-	newCell = newRow.insertCell(4);
+	newRow.insertCell(4);
+	newCell = newRow.insertCell(5);
 
   	// Append a text node to the cell
   	newText = document.createElement('button');
 	newText.class="edit-button";
+	newText.onClick = "sendUpdate()";
 	newText.id = "confirmButton";
 	newText.innerHTML = "Confirm";
 	newCell.appendChild(newText);
 
 
+}
+
+function sendUpdate(id) {
+	let name = document.getElementById("nameField").value;
+	let phone = document.getElementById("phoneField").value;
+	let email = document.getElementById("emailField").value;
+	
+
+	let tmp = {name:name,phone:phone,email:email,id:id};
+	let jsonPayload = JSON.stringify( tmp );
+
+	let url = urlBase + testBranch + api + '/UpdateContact.' + extension;
+	
+	let xhr = new XMLHttpRequest();
+	xhr.open("POST", url, true);
+	xhr.setRequestHeader("Content-type", "application/json; charset=UTF-8");
+	try
+	{
+		xhr.onreadystatechange = function() 
+		{
+			if (this.readyState == 4 && this.status == 200) 
+			{
+				searchTable();
+			}
+		};
+		xhr.send(jsonPayload);
+	}
+	catch(err)
+	{
+		//document.getElementById("colorAddResult").innerHTML = err.message;
+	}
 }
 
 function deleteContact(row) {
