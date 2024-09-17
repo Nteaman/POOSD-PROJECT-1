@@ -7,10 +7,11 @@
     $email = $inData["email"];
     $userId = $inData["userId"];
 		
+    $phone = formatPhoneNumber($phone);
+		
 		returnWithSuccess();
 		exit(1);
 		
-    $phone = formatPhoneNumber($phone);
 
     $conn = new mysqli("localhost", "daisy", "SPOoks0219!!", "SMALLPROJ");
     if($conn->connect_error)
