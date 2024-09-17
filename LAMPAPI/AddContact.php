@@ -8,10 +8,6 @@
     $userId = $inData["userId"];
 		
     $phone = formatPhoneNumber($phone);
-		
-		returnWithSuccess();
-		exit(1);
-		
 
     $conn = new mysqli("localhost", "daisy", "SPOoks0219!!", "SMALLPROJ");
     if($conn->connect_error)
@@ -36,7 +32,7 @@
         }
         else{
             // format the phone number as XXX-XXX-XXXX
-            return sustr($phone, 0, 3) . '-' . substr($phone, 3, 3) . '-' . substr($phone, 6, 4);
+            return substr($phone, 0, 3) . '-' . substr($phone, 3, 3) . '-' . substr($phone, 6, 4);
         }
     }
 
