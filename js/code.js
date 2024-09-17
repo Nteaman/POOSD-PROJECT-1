@@ -305,7 +305,7 @@ function sendUpdate(id) {
 				searchTable();
 			}
 		};
-		xhr.send(jsonPayload);
+		//xhr.send(jsonPayload);
 	}
 	catch(err)
 	{
@@ -341,7 +341,7 @@ function deleteContact(row) {
 				searchTable();
 			}
 		};
-		//xhr.send(jsonPayload);
+		xhr.send(jsonPayload);
 	}
 	catch(err)
 	{
