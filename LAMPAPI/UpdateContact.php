@@ -28,15 +28,17 @@
         $stmt = $conn->prepare("Update Contacts set Name = ? WHERE ID=?");
         $stmt->bind_param("ss", $name, $id);
         $stmt->execute();
-
-	$stmt = $conn->prepare("Update Contacts set Phone = ? WHERE ID=?");
+        $stmt->close();
+				
+				$stmt = $conn->prepare("Update Contacts set Phone = ? WHERE ID=?");
         $stmt->bind_param("ss", $phone, $id);
         $stmt->execute();
-
-	$stmt = $conn->prepare("Update Contacts set Email = ? WHERE ID=?");
+        $stmt->close();
+				
+				$stmt = $conn->prepare("Update Contacts set Email = ? WHERE ID=?");
         $stmt->bind_param("ss", $email, $id);
         $stmt->execute();
-	    
+				
         $stmt->close();
         $conn->close();
         returnWithSuccess();
