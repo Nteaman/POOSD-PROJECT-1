@@ -124,7 +124,7 @@ function addContact()
 	let tmp = {name:name,phone:phone,email:email,userId:userId};
 	let jsonPayload = JSON.stringify( tmp );
 
-	let url = urlBase +testBranch + api + '/AddContacts.' + extension;
+	let url = urlBase + testBranch + api + '/AddContact.' + extension;
 	
 	let xhr = new XMLHttpRequest();
 	xhr.open("POST", url, true);
