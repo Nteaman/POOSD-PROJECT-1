@@ -72,7 +72,7 @@
 	
 	function returnWithInfo( $names, $phones, $emails, $IDs )
 	{
-		$retValue = '{"name":[' . $names . '],"phone":[' . $phones . '],"email":[' . $emails . '],"id":[' . $IDs . '],"error":""}';
+		$retValue = '{"name":[' . $names . '],"email":[' . $emails . '],"phone":[' . $phones . '],"id":[' . $IDs . '],"error":""}';
 		sendResultInfoAsJson( $retValue );
 	}
 	
