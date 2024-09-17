@@ -206,7 +206,7 @@ function searchTable()
 					newRow.appendChild(cell3); 
 
 					let cell4 = document.createElement('td'); 
-					cell4.innerHTML = '<button class="edit-button" onclick="searchContact(this)" >Edit</button>';
+					cell4.innerHTML = '<button class="edit-button" onclick="editContact(this)" >Edit</button>';
 					newRow.appendChild(cell4);
 
 					let cell5 = document.createElement('td'); 
@@ -226,6 +226,14 @@ function searchTable()
 		console.log("Big error");
 	}
 	
+}
+
+function editContact(row) {
+	let table = document.getElementById('myTable');
+	let ind = row.rowIndex
+	let newRow = tableRef.insertRow(ind);
+
+	alert(ind);
 }
 
 function deleteContact(row) {
