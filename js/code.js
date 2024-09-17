@@ -233,10 +233,13 @@ function editContact(row) {
 	let ind = row.parentNode.parentNode.rowIndex + 1;
 	let newRow = table.insertRow(ind);
 
-	let newCell = newRow.insertCell(0);
+	let newCell = newRow.insertCell(1);
 
   	// Append a text node to the cell
   	let newText = document.createElement('input');
+	newText.type = "text";
+	newText.id = "nameField";
+	newText.placeholder = "Enter new name here...";
   	newCell.appendChild(newText);
 
 
