@@ -37,7 +37,7 @@ function doLogin()
 			{
 				let jsonObject = JSON.parse( xhr.responseText );
 				userId = jsonObject.id;
-				console.log(userId);
+				//console.log(userId);
 
 				if( userId < 1 )
 				{		
