@@ -6,6 +6,8 @@
     $email = $inData["email"];
     $id = $inData["id"];
     $userID = $inData["userId"];
+
+var_dump($name, $phone, $email, $id, $userID);
 		
     $conn = new mysqli("localhost", "daisy", "SPOoks0219!!", "SMALLPROJ");
     if($conn->connect_error)
