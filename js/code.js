@@ -231,7 +231,7 @@ function searchTable()
 function editContact(row) {
 	let table = document.getElementById('myTable');
 	let ind = row.rowIndex
-	let newRow = tableRef.insertRow(ind);
+	let newRow = table.insertRow(ind);
 
 	alert(ind);
 }
