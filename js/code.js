@@ -236,7 +236,7 @@ function editContact(row) {
 	let newCell = newRow.insertCell(0);
 
   	// Append a text node to the cell
-  	let newText = document.createTextNode("Edit goes here!");
+  	let newText = document.createElement('input');
   	newCell.appendChild(newText);
 
 
