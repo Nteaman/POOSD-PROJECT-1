@@ -243,6 +243,33 @@ function editContact(row) {
 	newText.placeholder = "Enter new name here...";
   	newCell.appendChild(newText);
 
+	newCell = newRow.insertCell(2);
+
+  	// Append a text node to the cell
+  	newText = document.createElement('input');
+	newText.type = "text";
+	newText.id = "phoneField";
+	newText.placeholder = "Enter new phone number here...";
+  	newCell.appendChild(newText);
+
+	newCell = newRow.insertCell(3);
+
+  	// Append a text node to the cell
+  	newText = document.createElement('input');
+	newText.type = "text";
+	newText.id = "emailField";
+	newText.placeholder = "Enter new email here...";
+  	newCell.appendChild(newText);
+
+	newCell = newRow.insertCell(4);
+
+  	// Append a text node to the cell
+  	newText = document.createElement('button');
+	newText.class="edit-button";
+	newText.id = "confirmButton";
+	newText.innerHTML = "Confirm";
+	newCell.appendChild(newText);
+
 
 }
 
