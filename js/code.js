@@ -272,7 +272,7 @@ function editContact(row) {
 	newText.class="edit-button";
 	newText.id = "confirmButton";
 	newText.innerHTML = "Confirm!";
-	newText.onclick = "sendUpdate(id)";
+	newText.onclick = sendUpdate(id);
 	newCell.appendChild(newText);
 
 	
