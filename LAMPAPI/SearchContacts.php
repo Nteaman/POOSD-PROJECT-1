@@ -5,6 +5,7 @@
 	$names = "";
 	$phones = "";
 	$emails = "";
+	$IDs = "";
 	$searchCount = 0;
 
 	$conn = new mysqli("localhost", "daisy", "SPOoks0219!!", "SMALLPROJ");
@@ -14,7 +15,7 @@
 	} 
 	else
 	{
-		$stmt = $conn->prepare("select Name, Phone, Email from Contacts where Name like ? and UserID=?");
+		$stmt = $conn->prepare("select Name, Phone, Email ID from Contacts where Name like ? and UserID=?");
 		$contactName = "%" . $inData["search"] . "%";
 		$stmt->bind_param("ss", $contactName, $inData["userId"]);
 		$stmt->execute();
@@ -28,11 +29,13 @@
 				$names .= ",";
 				$phones .= ",";
 				$emails .= ",";
+				$IDs .= ",";
 			}
 			$searchCount++;
 			$names .= '"' . $row["Name"] . '"';
 			$phones .= '"' . $row["Phone"] . '"';
 			$emails .= '"' . $row["Email"] . '"';
+			$IDs .= '"' . $row["ID"] . '"';
 			
 		}
 		
@@ -42,7 +45,7 @@
 		}
 		else
 		{
-			returnWithInfo( $names, $phones, $emails );
+			returnWithInfo( $names, $phones, $emails, $IDs );
 		}
 		
 		$stmt->close();
@@ -66,9 +69,9 @@
 		sendResultInfoAsJson( $retValue );
 	}
 	
-	function returnWithInfo( $names, $phones, $emails )
+	function returnWithInfo( $names, $phones, $emails, $IDs )
 	{
-		$retValue = '{"name":[' . $names . '],"email":[' . $emails . '],"phone":[' . $phones . '],"error":""}';
+		$retValue = '{"name":[' . $names . '],"email":[' . $emails . '],"phone":[' . $phones . '],"id":[' . $IDs . '],"error":""}';
 		sendResultInfoAsJson( $retValue );
 	}
 	
