@@ -1,13 +1,14 @@
 <?php
     $inData = getRequestInfo();
 		
-		returnWithSuccess();
-		exit(1);
 
     $name = $inData["name"];
     $phone = $inData["phone"];
     $email = $inData["email"];
     $userId = $inData["userId"];
+		
+		returnWithSuccess();
+		exit(1);
 		
     $phone = formatPhoneNumber($phone);
 
