@@ -239,7 +239,6 @@ function editContact(row) {
   	let newText = document.createTextNode("Edit goes here!");
   	newCell.appendChild(newText);
 
-	alert(ind);
 
 }
 
