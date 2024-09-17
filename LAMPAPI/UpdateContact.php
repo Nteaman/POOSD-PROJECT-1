@@ -25,8 +25,8 @@
         returnWithError( $conn->connect_error );
     }
     else{
-        $stmt = $conn->prepare("Update Contacts set Name = ? WHERE ID=?");
-        $stmt->bind_param("ss", $name, $id);
+        $stmt = $conn->prepare("Update Contacts set Name = $name WHERE ID=$id");
+        //$stmt->bind_param("ss", $name, $id);
         $stmt->execute();
         $stmt->close();
         $conn->close();
