@@ -212,6 +212,7 @@ function searchTable()
 					let cell5 = document.createElement('td'); 
 					cell5.innerHTML = '<button class="delete-button" onclick="deleteContact(this)">Delete</button>';
 					newRow.appendChild(cell5); 
+					document.getElementById('confirmButton').onClick= "sendUpdate(id)";
  
 					// Append the new row to the table 
 					bodyRef.appendChild(newRow); 
@@ -273,7 +274,7 @@ function editContact(row) {
 	newText.innerHTML = "Confirm!";
 	newCell.appendChild(newText);
 
-	document.getElementById('confirmButton').innerHTML= "Wait";
+	
 
 
 }
