@@ -12,15 +12,19 @@
         returnWithError( $conn->connect_error );
     }
     else{
-			
-    returnWithSuccess();
-		exit(1);
-
         $stmt = $conn->prepare("UPDATE Contacts (Name,Phone,Email) VALUES(?,?,?) WHERE ID=?");
         $stmt->bind_param("ssss", $name, $phone, $email, $id);
-        $stmt->execute();
+        
+				
+				returnWithSuccess();
+				exit(1);
+				
+				$stmt->execute();
         $stmt->close();
         $conn->close();
+				
+				
+				
         returnWithSuccess();
     }
 
