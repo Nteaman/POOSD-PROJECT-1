@@ -269,10 +269,11 @@ function editContact(row) {
   	// Append a text node to the cell
   	newText = document.createElement('button');
 	newText.class="edit-button";
-	newText.onClick = alert(id);
 	newText.id = "confirmButton";
 	newText.innerHTML = "Confirm!";
 	newCell.appendChild(newText);
+
+	document.getElementById('confirmButton').onClick = alert(id);
 
 
 }
