@@ -287,7 +287,7 @@ function sendUpdate(id) {
 	let email = document.getElementById("emailField").value;
 	
 
-	let tmp = {name:name,phone:phone,email:email,id:id};
+	let tmp = {name:name, phone:phone, email:email, id:id, userId:userId};
 	let jsonPayload = JSON.stringify( tmp );
 	console.log(jsonPayload);
 
@@ -305,7 +305,7 @@ function sendUpdate(id) {
 				searchTable();
 			}
 		};
-		//xhr.send(jsonPayload);
+		xhr.send(jsonPayload);
 	}
 	catch(err)
 	{
