@@ -231,13 +231,15 @@ function searchTable()
 function editContact(row) {
 	let table = document.getElementById('myTable');
 	let ind = row.parentNode.parentNode.rowIndex
-	let newRow = table.insertRow(ind) - 1;
+	let newRow = table.insertRow(ind);
 
 	let newCell = newRow.insertCell(0);
 
   	// Append a text node to the cell
   	let newText = document.createTextNode("Edit goes here!");
   	newCell.appendChild(newText);
+
+	alert(ind);
 
 }
 
