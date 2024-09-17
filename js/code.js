@@ -173,7 +173,7 @@ function searchTable()
 		{
 			if (this.readyState == 4 && this.status == 200) 
 			{
-				//console.log(JSON.stringify( xhr.responseText ));
+				console.log(JSON.stringify( xhr.responseText ));
 				
 				let jsonObject = JSON.parse( xhr.responseText );
 
