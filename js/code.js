@@ -187,7 +187,7 @@ function searchTable()
 				{
 					
 					let newRow = document.createElement('tr');
-					newRow.id = i;
+					newRow.id = jsonObject.id[i];
 
 					let cell0 = document.createElement('td'); 
 					cell0.textContent = i + 1; 
@@ -234,6 +234,8 @@ function deleteContact(row) {
 	let name = row.parentNode.parentNode.getElementsByTagName('td')[1].innerHTML;
 	let phone = row.parentNode.parentNode.getElementsByTagName('td')[2].innerHTML;
 	let email = row.parentNode.parentNode.getElementsByTagName('td')[3].innerHTML;
+	let id = row.parentNode.parentNode.id;
+	alert(id);
 
 	if(!confirm("You are about to delete " + name + " from your contacts. \nPress OK to confirm.")) return;
 
