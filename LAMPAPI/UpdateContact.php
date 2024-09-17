@@ -16,10 +16,11 @@
         $stmt->bind_param("ssss", $name, $phone, $email, $id);
         
 				
+				$stmt->execute();
+				
 				returnWithSuccess();
 				exit(1);
 				
-				$stmt->execute();
         $stmt->close();
         $conn->close();
 				
