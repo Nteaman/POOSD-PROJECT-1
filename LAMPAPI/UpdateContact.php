@@ -4,7 +4,7 @@
     $name = $inData["name"];
     $phone = $inData["phone"];
     $email = $inData["email"];
-    $ID = $inData["id"];
+    $id = $inData["id"];
 
     $conn = new mysqli("localhost", "daisy", "SPOoks0219!!", "SMALLPROJ");
     if($conn->connect_error)
@@ -13,7 +13,7 @@
     }
     else{
         $stmt = $conn->prepare("UPDATE Contacts (Name,Phone,Email) VALUES(?,?,?) WHERE ID=?");
-        $stmt->bind_param("ssss", $name, $phone, $email, $ID);
+        $stmt->bind_param("ssss", $name, $phone, $email, $id);
         $stmt->execute();
         $stmt->close();
         $conn->close();
@@ -37,7 +37,7 @@
         sendResultInfoAsJson( $retValue );
     }
 		
-		function returnWithSuccess()
+    function returnWithSuccess()
     {
         $retValue = '{"result":"success"}';
         sendResultInfoAsJson( $retValue );
