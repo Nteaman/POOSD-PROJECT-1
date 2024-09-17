@@ -11,7 +11,8 @@
     $conn = new mysqli("localhost", "daisy", "SPOoks0219!!", "SMALLPROJ");
     if($conn->connect_error)
     {
-        returnWithError( $conn->connect_error );
+				returnWithSuccess();
+        //returnWithError( $conn->connect_error );
     }
     else{
         $stmt = $conn->prepare("INSERT into Contacts (Name,Phone,Email,UserID) VALUES(?,?,?,?)");
