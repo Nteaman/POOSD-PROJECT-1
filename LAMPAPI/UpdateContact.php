@@ -1,27 +1,41 @@
 <?php
+
+		// HOW TO SECURE THIS?
+		// Store user id and hashed password on client side 
+		// All operations need the user to send the user id and hashed password for verification
+		// Contact updating/deleting requests must belong to the user
+		
     $inData = getRequestInfo();
 
-    $name = $inData["name"];
-    $phone = $inData["phone"];
-    $email = $inData["email"];
     $id = $inData["id"];
+    $name = $inData["name"];
+    $email = $inData["email"];
+    $phone = $inData["phone"];
+
     $userID = $inData["userId"];
 
-var_dump($name, $phone, $email, $id, $userID);
+
+    //$hash = $inData["Hash"];
 		
+	//$validity = validateUser($userID, $hash);
+
     $conn = new mysqli("localhost", "daisy", "SPOoks0219!!", "SMALLPROJ");
     if($conn->connect_error)
     {
         returnWithError( $conn->connect_error );
     }
     else{
-        $stmt = $conn->prepare("UPDATE Contacts (Name,Phone,Email) VALUES(?,?,?) WHERE ID=? and UserID=?");
-        $stmt->bind_param("ssss", $name, $phone, $email, $id, $userID);
-	    
-	$stmt->execute();
+        $stmt = $conn->prepare("Update Contacts set Name = ?, Phone = ?, Email = ?, WHERE ID=?");
+        $stmt->bind_param("ssss", $name, $email, $phone, $id);
+        $stmt->execute();
         $stmt->close();
         $conn->close();
         returnWithSuccess();
+    }
+		
+		function validateUser($userID, $hash)
+    {
+				return true;
     }
 
     function getRequestInfo()
@@ -35,13 +49,14 @@ var_dump($name, $phone, $email, $id, $userID);
         echo $obj;
     }
 
+    
     function returnWithError( $err )
     {
         $retValue = '{"result":"error","error":"' . $err . '"}';
         sendResultInfoAsJson( $retValue );
     }
 		
-    function returnWithSuccess()
+		function returnWithSuccess()
     {
         $retValue = '{"result":"success"}';
         sendResultInfoAsJson( $retValue );
