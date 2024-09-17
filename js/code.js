@@ -273,7 +273,7 @@ function editContact(row) {
 	newText.innerHTML = "Confirm!";
 	newCell.appendChild(newText);
 
-	document.getElementById('confirmButton').onClick = alert(id);
+	document.getElementById('confirmButton').innerHTML= "Wait";
 
 
 }
