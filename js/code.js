@@ -278,6 +278,8 @@ function editContact(row) {
 }
 
 function sendUpdate(id) {
+	alert("here!")
+	
 	let name = document.getElementById("nameField").value;
 	let phone = document.getElementById("phoneField").value;
 	let email = document.getElementById("emailField").value;
