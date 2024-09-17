@@ -281,7 +281,6 @@ function editContact(row) {
 }
 
 function sendUpdate(id) {
-	alert("here!")
 	
 	let name = document.getElementById("nameField").value;
 	let phone = document.getElementById("phoneField").value;
@@ -290,6 +289,7 @@ function sendUpdate(id) {
 
 	let tmp = {name:name,phone:phone,email:email,id:id};
 	let jsonPayload = JSON.stringify( tmp );
+	console.log(jsonPayload);
 
 	let url = urlBase + testBranch + api + '/UpdateContact.' + extension;
 	
@@ -337,6 +337,7 @@ function deleteContact(row) {
 		{
 			if (this.readyState == 4 && this.status == 200) 
 			{
+				console.log(JSON.stringify( xhr.responseText ));
 				searchTable();
 			}
 		};
