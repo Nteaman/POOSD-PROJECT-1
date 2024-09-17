@@ -1,11 +1,14 @@
 <?php
     $inData = getRequestInfo();
+		
+		returnWithSuccess();
+		exit(1);
 
     $name = $inData["name"];
     $phone = $inData["phone"];
     $email = $inData["email"];
     $userId = $inData["userId"];
-
+		
     $phone = formatPhoneNumber($phone);
 
     $conn = new mysqli("localhost", "daisy", "SPOoks0219!!", "SMALLPROJ");
