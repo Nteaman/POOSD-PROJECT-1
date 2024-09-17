@@ -26,16 +26,17 @@
 		{
 			if( $searchCount > 0 )
 			{
-				$names .= ",";
+				$names  .= ",";
 				$phones .= ",";
 				$emails .= ",";
-				$IDs .= ",";
+				$IDs    .= ",";
 			}
 			$searchCount++;
-			$names .= '"' . $row["Name"] . '"';
+			$IDs    .= '"' . $row["ID"]    . '"';
+			$names  .= '"' . $row["Name"]  . '"';
 			$phones .= '"' . $row["Phone"] . '"';
 			$emails .= '"' . $row["Email"] . '"';
-			$IDs .= '"' . $row["ID"] . '"';
+			
 			
 		}
 		
