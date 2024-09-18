@@ -28,6 +28,8 @@ function doSignup() {
 				let jsonObject = JSON.parse( xhr.responseText );
 				userId = jsonObject.id;
 
+				console.log(userId);
+
 				saveCookie();
 				
 				window.location.href = "Landingpage.html";
