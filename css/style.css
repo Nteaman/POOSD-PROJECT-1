@@ -82,6 +82,24 @@ h1, #title
     opacity: 50%;
 }
 
+.logout-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 0.75em;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #FFFFFF;
+    padding: 2px 5px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .logout-button:hover {
+    background-color: #00d5124f;
+    color: #FFFFFF;
+    opacity: 50%;
+  }
+
 #loginName, #loginPassword, #firstname, #lastname, #username, #password, #searchInput
 {
 	font-size: 30px;

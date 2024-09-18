@@ -350,6 +350,9 @@ function deleteContact(row) {
 	
 };
 
+function logout() {
+	window.location.href = "Login.html";
+}
 
 function goDashboard(){
 	window.location.href = "Landingpage.html";
