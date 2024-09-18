@@ -8,7 +8,10 @@ function doSignup() {
 	let login = document.getElementById("username").value;
 	let password = document.getElementById("password").value;
 	
-	
+	if ( !(firstName && lastName && login && password) ) {
+		console.log("Blank!");
+		return;
+	}	
 
 	let tmp = { firstName: firstName, lastName: lastName, login: login, password: password };
 	let jsonPayload = JSON.stringify(tmp);
