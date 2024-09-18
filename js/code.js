@@ -351,6 +351,10 @@ function deleteContact(row) {
 };
 
 function logout() {
+	userId = 0;
+	firstName = "";
+	lastName = "";
+	saveCookie();
 	window.location.href = "index.html";
 }
 
