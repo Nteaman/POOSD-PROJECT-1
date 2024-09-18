@@ -150,7 +150,7 @@ function addContact()
 
 function searchTable()
 {
-	//console.log(userId);
+	console.log(userId);
 	
 	let search = document.getElementById("searchInput").value;
 	
