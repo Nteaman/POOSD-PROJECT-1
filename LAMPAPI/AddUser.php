@@ -30,7 +30,7 @@
 				$stmt->execute();
 				$stmt->close();
 				$conn->close();
-				returnWithSuccess();
+				returnWithInfo( $row['ID'] );
 			}
     }
 
@@ -56,5 +56,10 @@
         $retValue = '{"result":"success"}';
         sendResultInfoAsJson( $retValue );
     }
+function returnWithInfo( $id )
+	{
+		$retValue = '{"id":' . $id . ',"error":""}';
+		sendResultInfoAsJson( $retValue );
+	}
 
     ?>
