@@ -3,8 +3,8 @@ function doSignup() {
 	userId = 0;
 	let flag = true;
 		
-	let firstName = document.getElementById("firstname").value;
-	let lastName = document.getElementById("lastname").value;
+	firstName = document.getElementById("firstname").value;
+	lastName = document.getElementById("lastname").value;
 	let login = document.getElementById("username").value;
 	let password = document.getElementById("password").value;
 	
@@ -24,6 +24,11 @@ function doSignup() {
 	try {
 		xhr.onreadystatechange = function () {
 			if (this.readyState == 4 && this.status == 200) {
+
+				userId = jsonObject.id;
+
+				saveCookie();
+				
 				window.location.href = "Landingpage.html";
 			}
 		};
