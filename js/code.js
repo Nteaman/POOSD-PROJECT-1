@@ -121,7 +121,6 @@ function addContact()
 	let email = document.getElementById("email").value;
 	
 	if(!name || !phone || !email) {
-		showToast("Please fill out all fields");
 		return;
 	}
 
@@ -149,7 +148,7 @@ function addContact()
 		//document.getElementById("colorAddResult").innerHTML = err.message;
 	}
 
-	showToast("Contact successfully added!");
+	showToast();
 	
 }
 
@@ -370,7 +369,6 @@ function goDashboard(){
 
 function showToast() {
     const toast = document.getElementById('toast');
-	toast.textContent = message;
     toast.classList.add('show');
     setTimeout(() => {
         toast.classList.remove('show');
