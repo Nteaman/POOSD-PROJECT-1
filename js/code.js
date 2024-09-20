@@ -127,7 +127,6 @@ function addContact()
 	}
 
 	if (!phoneRegex.test(phone)) {
-        showToast("Invalid phone number format. Please use XXX-XXX-XXXX.");
         return;
     }
 
