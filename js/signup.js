@@ -1,7 +1,7 @@
 
 function doSignup() {
 	userId = 0;
-	let flag = true;
+	//let flag = true;
 		
 	firstName = document.getElementById("firstname").value;
 	lastName = document.getElementById("lastname").value;
@@ -26,6 +26,12 @@ function doSignup() {
 			if (this.readyState == 4 && this.status == 200) {
 
 				let jsonObject = JSON.parse( xhr.responseText );
+
+				if(jsonObject.error && jsonObject.error === "Login already exists."){
+					showToast();
+					return;
+				}
+
 				userId = jsonObject.id;
 
 				console.log(userId);
@@ -38,6 +44,15 @@ function doSignup() {
 		xhr.send(jsonPayload);
 	}
 	catch (err) {
+		console.log(err);
 	}
 
+}
+
+function showToast() {
+    const toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 5000);
 }
