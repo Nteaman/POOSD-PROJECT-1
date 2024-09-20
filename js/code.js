@@ -120,6 +120,10 @@ function addContact()
 	let phone = document.getElementById("phone").value;
 	let email = document.getElementById("email").value;
 	
+	if(!name || !phone || !email) {
+		showToast("Please fill out all fields");
+		return;
+	}
 
 	let tmp = {name:name,phone:phone,email:email,userId:userId};
 	let jsonPayload = JSON.stringify( tmp );
@@ -145,7 +149,7 @@ function addContact()
 		//document.getElementById("colorAddResult").innerHTML = err.message;
 	}
 
-	showToast();
+	showToast("Contact successfully added!");
 	
 }
 
