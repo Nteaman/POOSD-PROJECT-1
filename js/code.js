@@ -144,6 +144,8 @@ function addContact()
 	{
 		//document.getElementById("colorAddResult").innerHTML = err.message;
 	}
+
+	showToast();
 	
 }
 
@@ -362,3 +364,10 @@ function goDashboard(){
 	window.location.href = "Landingpage.html";
 }
 
+function showToast() {
+    const toast = document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 5000);
+}
