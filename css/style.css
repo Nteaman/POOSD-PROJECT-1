@@ -57,6 +57,7 @@ h1, #title
     /*border-radius: 25px;*/
     width: 50%;
     margin-left: 25%;
+    margin-bottom: 10px;
     font-family: 'Ubuntu', sans-serif;
 }
 
@@ -100,7 +101,7 @@ h1, #title
     opacity: 50%;
   }
 
-#loginName, #loginPassword, #firstname, #lastname, #username, #password, #searchInput
+#loginName, #loginPassword, #firstname, #lastname, #username, #password, #searchInput, #phone, #email
 {
 	font-size: 30px;
     width: 60%;
@@ -204,8 +205,8 @@ select{
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #333;
-    color: white;
+    background-color: #FFFFFF;
+    color: black;
     padding: 16px;
     border-radius: 8px;
     opacity: 0;
