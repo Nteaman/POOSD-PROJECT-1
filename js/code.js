@@ -119,10 +119,17 @@ function addContact()
 	let name = document.getElementById("firstname").value + " " + document.getElementById("lastname").value;
 	let phone = document.getElementById("phone").value;
 	let email = document.getElementById("email").value;
+
+	let phoneRegex = /^\d{3}-\d{3}-\d{4}$/;
 	
 	if(!name || !phone || !email) {
 		return;
 	}
+
+	if (!phoneRegex.test(phone)) {
+        showToast("Invalid phone number format. Please use XXX-XXX-XXXX.");
+        return;
+    }
 
 	let tmp = {name:name,phone:phone,email:email,userId:userId};
 	let jsonPayload = JSON.stringify( tmp );
