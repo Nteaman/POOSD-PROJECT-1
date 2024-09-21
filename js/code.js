@@ -241,6 +241,9 @@ function searchTable()
 
 function editContact(row) {
 	let id = row.parentNode.parentNode.id;
+	let name = row.parentNode.parentNode.getElementsByTagName('td')[1].innerHTML;
+	let phone = row.parentNode.parentNode.getElementsByTagName('td')[2].innerHTML;
+	let email = row.parentNode.parentNode.getElementsByTagName('td')[3].innerHTML;
 	
 	let table = document.getElementById('myTable');
 	let ind = row.parentNode.parentNode.rowIndex + 1;
@@ -283,7 +286,7 @@ function editContact(row) {
 	newText.class="edit-button";
 	newText.id = "confirmButton";
 	newText.innerHTML = "Confirm!";
-	newText.onclick = function(){sendUpdate(id);};
+	newText.onclick = function(){sendUpdate(id, name, phone, email);};
 	newCell.appendChild(newText);
 
 	
@@ -291,11 +294,16 @@ function editContact(row) {
 
 }
 
-function sendUpdate(id) {
-	
-	let name = document.getElementById("nameField").value;
-	let phone = document.getElementById("phoneField").value;
-	let email = document.getElementById("emailField").value;
+function sendUpdate(id, name, phone, email) {
+
+	if (document.getElementById("nameField").value)
+		name = document.getElementById("nameField").value;
+
+	if (document.getElementById("phoneField").value)
+		phone = document.getElementById("phoneField").value;
+
+	if (document.getElementById("emailField").value)
+		email = document.getElementById("emailField").value;
 	
 
 	let tmp = {name:name, phone:phone, email:email, id:id, userId:userId};
