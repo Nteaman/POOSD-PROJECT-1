@@ -127,6 +127,7 @@ function addContact()
 	}
 
 	if (!phoneRegex.test(phone)) {
+		showToast("Please enter in format of ###-###-####");
         return;
     }
 
@@ -154,7 +155,7 @@ function addContact()
 		//document.getElementById("colorAddResult").innerHTML = err.message;
 	}
 
-	showToast();
+	showToast("Contact successfully added!");
 	
 }
 
@@ -384,8 +385,9 @@ function goDashboard(){
 	window.location.href = "Landingpage.html";
 }
 
-function showToast() {
-    const toast = document.getElementById('toast');
+function showToast(msg) {
+    let toast = document.getElementById('toast');
+	toast.innerHTML = msg;
     toast.classList.add('show');
     setTimeout(() => {
         toast.classList.remove('show');
