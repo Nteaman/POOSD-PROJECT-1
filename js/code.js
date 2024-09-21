@@ -296,15 +296,18 @@ function editContact(row) {
 
 function sendUpdate(id, name, phone, email) {
 
-	if (document.getElementById("nameField").value)
+	if (document.getElementById("nameField").value){
+		console.log("Name not blank");
 		name = document.getElementById("nameField").value;
-
-	if (document.getElementById("phoneField").value)
+	}
+	if (document.getElementById("phoneField").value) {
+		console.log("Phone not blank");
 		phone = document.getElementById("phoneField").value;
-
-	if (document.getElementById("emailField").value)
+	}
+	if (document.getElementById("emailField").value) {
+		console.log("Email not blank");
 		email = document.getElementById("emailField").value;
-	
+	}
 
 	let tmp = {name:name, phone:phone, email:email, id:id, userId:userId};
 	let jsonPayload = JSON.stringify( tmp );
