@@ -28,7 +28,7 @@ function doSignup() {
 				let jsonObject = JSON.parse( xhr.responseText );
 
 				if(jsonObject.error && jsonObject.error === "Login already exists."){
-					showToast();
+					showToast("Username already exists! Please create a different one.");
 					return;
 				}
 
