@@ -388,7 +388,7 @@ function goDashboard(){
 
 function showToast(msg) {
     let toast = document.getElementById('toast');
-	toast.value = msg;
+	toast.innerHTML = msg;
 	console.log("Message:");
 	console.log(msg);
     toast.classList.add('show');
