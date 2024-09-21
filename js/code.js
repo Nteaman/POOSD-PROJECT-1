@@ -124,6 +124,7 @@ function addContact()
 	let phoneRegex = /^\d{3}-\d{3}-\d{4}$/;
 	
 	if(!name || !phone || !email) {
+		showToast("Please fill in all fields");
 		return;
 	}
 
