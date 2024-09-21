@@ -42,6 +42,7 @@ function doLogin()
 				if( userId < 1 )
 				{		
 					//document.getElementById("loginResult").innerHTML = "User/Password combination incorrect";
+					showToast("User/Password combination incorrect");
 					return;
 				}
 		
