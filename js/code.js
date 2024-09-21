@@ -127,9 +127,10 @@ function addContact()
 	}
 
 	if (!phoneRegex.test(phone)) {
+		console.log("Phone messed up");
 		showToast("Please enter in format of ###-###-####");
-        return;
-    }
+        	return;
+    	}
 
 	let tmp = {name:name,phone:phone,email:email,userId:userId};
 	let jsonPayload = JSON.stringify( tmp );
