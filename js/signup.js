@@ -9,6 +9,7 @@ function doSignup() {
 	let password = document.getElementById("password").value;
 	
 	if ( !(firstName && lastName && login && password) ) {
+		showToast("Please fill in all fields");
 		console.log("Blank!");
 		return;
 	}	
