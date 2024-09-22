@@ -1,39 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    </body>
-<head>
-  <title>ADD CONTACT</title>
-  <script type="text/javascript" src="js/md5.js"></script>
-  <script type="text/javascript" src="js/code.js"></script>
-  <script type="text/javascript" src="js/signup.js"></script>
-  <link href="css/style.css" rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css?family=Ubuntu"
-    rel="stylesheet"
-  />
-</head>
-
-<body onload = "readCookie()">
-  <div class = "center">
-      <div class = "textbox">
-  <h1 id = "sign">Add Contact</h1>
-  <input type="text" id="firstname" placeholder="First Name" /><br />
-  <input type="text" id="lastname" placeholder="Last Name" /><br />
-  <input type="text" id="phone" placeholder="Phone Number" /><br />
-  <input type="text" id="email" placeholder="Email Address" /><br />
-  <button type="button" id = "loginButton" class="buttons" onclick="addContact()">Add Contact</button>
-  <br />
-  <button type = "button" id = "signupButton" class="buttons" onclick = "goDashboard()">Return</button>
-
-</body>
-</div>
-</div>
-<div id="toast" class="toast">Contact successfully added!</div>
-</body>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>ADD CONTACT</title>
+		<script type="text/javascript" src="js/md5.js"/>
+		<script type="text/javascript" src="js/code.js"/>
+		<script type="text/javascript" src="js/signup.js"/>
+		<link href="css/style.css" rel="stylesheet"/>
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"/>
+	</head>
+	<body onload="readCookie()">
+		<div class="center">
+			<div class="textbox">
+				<h1 id="sign">Add Contact</h1>
+				<input type="text" id="firstname" placeholder="First Name"/>
+				<br/>
+				<input type="text" id="lastname" placeholder="Last Name"/>
+				<br/>
+				<input type="text" id="phone" placeholder="Phone Number"/>
+				<br/>
+				<input type="text" id="email" placeholder="Email Address"/>
+				<br/>
+				<button type="button" id="loginButton" class="buttons" onclick="addContact()">Add Contact</button>
+				<br/>
+				<button type="button" id="signupButton" class="buttons" onclick="goDashboard()">Return</button>
+			</div>
+		</div>
+		<div id="toast" class="toast">Contact successfully added!</div>
+	</body>
 </html>
