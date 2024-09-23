@@ -103,8 +103,16 @@ h1
     box-shadow: -15px 0 0 0 #ffffff;
 }
 
-div[id = "home"] {
-    width: 800px;
+div[id = "landing"] {
+    min-width: 1000px;
+    display: inline-block;
+    overflow-y: auto; /* Add vertical scrolling */
+
+}
+
+h1[id = "landing"] {
+    left: 42%;
+    font-size: 25px;
 }
 
 
@@ -121,7 +129,7 @@ div[id = "home"] {
 .buttons
 {
     height: 45px;
-    font-size: 18px;
+    font-size: 20px;
     /*border-radius: 25px;*/
     width: 100%;
     border-radius: 20px 20px 20px 20px;
