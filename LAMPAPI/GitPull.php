@@ -5,7 +5,7 @@
 
 	exec("cd /home/bitnami/htdocs/test/POOSD-PROJECT-1; git pull", $output, $retval);
 	
-	print_r($output);
+	print_r($retval);
 	
 	returnWithSuccess($output);
 	
