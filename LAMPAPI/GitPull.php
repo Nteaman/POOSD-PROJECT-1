@@ -1,11 +1,9 @@
 
 <?php
 
-	$inData = getRequestInfo();
-	
 	system("cd htdocs/test/POOSD-PROJECT-1/; git pull");
-	
-	returnWithSuccess();
+
+	returnWithSuccess();	
 	
 	function sendResultInfoAsJson( $obj )
 	{
