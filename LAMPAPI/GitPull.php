@@ -5,6 +5,8 @@
 	
 	exec("cd htdocs/test/POOSD-PROJECT-1/; git pull");
 	
+	returnWithSuccess();
+	
 	function sendResultInfoAsJson( $obj )
 	{
 		header('Content-type: application/json');
@@ -17,7 +19,7 @@
 		sendResultInfoAsJson( $retValue );
 	}
 	
-	function returnWithSucces( )
+	function returnWithSuccess( )
 	{
 		$retValue = '{"error":""}';
 		sendResultInfoAsJson( $retValue );
