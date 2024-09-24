@@ -3,7 +3,7 @@
 
 	returnWithSuccess(shell_exec("cd /home/bitnami/htdocs/test/POOSD-PROJECT-1; git pull"));
 
-	
+	returnWithError("Error!");
 	
 	function sendResultInfoAsJson( $obj )
 	{
