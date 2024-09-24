@@ -4,9 +4,9 @@
 	$retval=null;
 
 	exec("cd /home/bitnami/htdocs/test/POOSD-PROJECT-1; git pull", $output, $retval);
-	
-	exec('whoami', $output, $retval);
+
 	echo "Returned with status $retval and output:\n";
+	
 	print_r($output);
 	
 	function sendResultInfoAsJson( $obj )
