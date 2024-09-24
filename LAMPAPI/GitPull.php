@@ -3,7 +3,7 @@
 	$output=null;
 	$retval=null;
 
-	exec("cd /home/bitnami/htdocs/test/POOSD-PROJECT-1; git pull", $output, $retval);
+	exec("cd /home/bitnami/htdocs/test/POOSD-PROJECT-1  2>&1; git pull 2>&1", $output, $retval);
 
 	echo "Returned with status $retval and output:\n";
 	
