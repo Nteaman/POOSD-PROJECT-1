@@ -1,7 +1,7 @@
 
 <?php
 	
-	exec("cd /home/bitnami/htdocs/test/POOSD-PROJECT-1; git pull")
+	exec("cd /home/bitnami/htdocs/test/POOSD-PROJECT-1; git pull");
 	
 	returnWithSuccess();
 	
