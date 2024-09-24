@@ -3,7 +3,7 @@
 
 	$inData = getRequestInfo();
 	
-	exec("cd htdocs/test/POOSD-PROJECT-1/; git pull");
+	system("cd htdocs/test/POOSD-PROJECT-1/; git pull");
 	
 	returnWithSuccess();
 	
