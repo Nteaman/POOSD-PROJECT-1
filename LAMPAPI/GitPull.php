@@ -1,9 +1,9 @@
 
 <?php
 
-	shell_exec("cd /home/bitnami/htdocs/test/POOSD-PROJECT-1; git pull");
+	returnWithSuccess(shell_exec("cd /home/bitnami/htdocs/test/POOSD-PROJECT-1; git pull"));
 
-	returnWithSuccess();	
+	
 	
 	function sendResultInfoAsJson( $obj )
 	{
@@ -17,9 +17,9 @@
 		sendResultInfoAsJson( $retValue );
 	}
 	
-	function returnWithSuccess( )
+	function returnWithSuccess( $message )
 	{
-		$retValue = '{"error":""}';
+		$retValue = '{"message": "' . $message . '", "error":""}';
 		sendResultInfoAsJson( $retValue );
 	}
 	
