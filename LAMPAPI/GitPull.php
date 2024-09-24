@@ -1,10 +1,11 @@
 
 <?php
+	$output=null;
+	$retval=null;
+
+	exec("cd /home/bitnami/htdocs/test/POOSD-PROJECT-1; git pull", $output, $retval);
 	
-	exec("cd /home/bitnami/htdocs/test/POOSD-PROJECT-1; git pull");
-	
-	returnWithSuccess();
-	
+	returnWithSuccess($output);
 	
 	function sendResultInfoAsJson( $obj )
 	{
