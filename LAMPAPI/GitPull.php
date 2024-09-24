@@ -1,9 +1,10 @@
 
 <?php
-
-	returnWithSuccess(shell_exec("cd /home/bitnami/htdocs/test/POOSD-PROJECT-1; git pull"));
-
-	returnWithError("Error!");
+	
+	exec("cd /home/bitnami/htdocs/test/POOSD-PROJECT-1; git pull")
+	
+	returnWithSuccess();
+	
 	
 	function sendResultInfoAsJson( $obj )
 	{
