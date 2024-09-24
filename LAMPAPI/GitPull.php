@@ -1,7 +1,7 @@
 
 <?php
 
-	shell_exec("cd htdocs/test/POOSD-PROJECT-1/ && git pull");
+	shell_exec("cd htdocs/test/POOSD-PROJECT-1/; git pull");
 
 	returnWithSuccess();	
 	
